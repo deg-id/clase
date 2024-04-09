@@ -22,7 +22,7 @@
             <!-- Los datos del formulario no se enviarán a ningún lado porque la acción está configurada para "#" -->
             <form action="#" method="POST">
                 <label for="nombre">Nombre:</label> <br>
-                <input type="text" id="nombre" name="nombre" required> <br>
+                <input type="text" id="nombre1" name="nombre1" required> <br>
                 
                 <label for="correo">Correo electrónico:</label> <br>
                 <input type="email" id="correo" name="correo" required><br>
@@ -38,7 +38,7 @@
 
 
         <!-- Formulario en la página de origen (index.html) -->
-<form action="datos.html" method="GET" target="_blank"  onsubmit="enviarDatos()">
+<form action="datos.html" method="POST" target="_blank"  onsubmit="enviarDatos()">
     <br>
     <input type="text" id="nombre" name="nombre" required> <br>
     <input type="submit" value="Enviar">
@@ -54,7 +54,7 @@
 
     function enviarDatos(){
 
-            const nombre = document.getElementById('nombreUsuario').value;
+            const nombre = document.getElementById('nombre').value;
             localStorage.setItem('nombre', nombre);
     }
 </script>
